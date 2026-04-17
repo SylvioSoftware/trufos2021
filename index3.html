@@ -8,8 +8,8 @@
         /* Gradiente Extraído do Conceito de 2021 */
         :root {
             --azul-logo: #0056b3;
-            --topo-gradiente: #4da1a9; /* Verde água superior */
-            --fim-gradiente: #2e6e75;  /* Verde petróleo inferior */
+            --topo-gradiente: #95c29d; /* #4da1a9 Verde água superior */
+            --fim-gradiente: #378d8e;  /* #2e6e75 Verde petróleo inferior */
         }
 
         body { 
@@ -18,7 +18,7 @@
             padding: 0; 
             /* O gradiente agora ocupa a tela toda, incluindo o fundo do cabeçalho */
             /*background: linear-gradient(180deg, var(--topo-gradiente) 0%, var(--fim-gradiente) 100%);*/
-            background: linear-gradient(to right, var(--fim-gradiente), rgba(255, 255, 255, 0.9), var(--fim-gradiente));
+            background: linear-gradient(to right, var(--fim-gradiente), var(--topo-gradiente), var(--fim-gradiente));
             background-attachment: fixed;
             color: #333;
         }
