@@ -6,56 +6,56 @@
     <title>Trufos - Assistência Técnica Hospitalar</title>
     <link rel="icon" type="image/x-icon" href="img/Favicon.ico">
     <style>
-        /* Paleta de Cores Oficial */
+        /* Cor Oficial Baseada no Logo */
         :root {
-            --azul-trufos: #2e3091;
+            --azul-trufos: #0056b3;
             --azul-escuro: #004494;
             --branco: #ffffff;
             --fundo: #f9f9f9;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: var(--fundo); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: var(--fundo); }
         
-        /* Cabeçalho Ajustado - Espaçamento e Cor */
-        header { background: var(--branco); padding: 25px 40px; border-bottom: 4px solid var(--azul-trufos); display: flex; flex-direction: column; align-items: flex-start; }
-        header img { height: 110px; width: auto; margin-bottom: 5px; } 
+        /* Cabeçalho - Ajuste Fino de Alinhamento e Cor */
+        header { background: var(--branco); padding: 30px 40px; border-bottom: 4px solid var(--azul-trufos); display: flex; flex-direction: column; align-items: flex-start; }
+        header img { height: 115px; width: auto; margin-bottom: 8px; } 
         
         .header-text p { 
-            margin: 5px 0 0 0; /* Leve baixada no texto conforme pedido */
+            margin: 0; 
             font-family: "Arial Black", Gadget, sans-serif; 
-            font-size: 1.25em; 
-            color: var(--azul-trufos); /* Azul oficial */
+            font-size: 1.3em; 
+            color: var(--azul-trufos); 
             text-transform: uppercase;
             letter-spacing: -1px;
             line-height: 1;
         }
 
-        /* Menu Restaurado e Estilizado */
+        /* Menu Suspenso */
         nav { background: var(--azul-trufos); position: relative; z-index: 1000; }
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
         nav li { position: relative; }
         nav a { color: var(--branco); text-decoration: none; padding: 15px 25px; display: block; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
         nav a:hover { background: var(--azul-escuro); }
 
-        /* Submenu (Dropdown) */
         .dropdown { display: none; position: absolute; background: var(--azul-escuro); min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
         .dropdown a { padding: 12px 15px; text-transform: none; font-size: 0.9em; border-bottom: 1px solid var(--azul-trufos); text-align: left; }
         nav li:hover .dropdown { display: block; }
 
-        /* Conteúdo */
-        .container { padding: 40px; max-width: 950px; margin: 30px auto; background: var(--branco); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: var(--azul-trufos); border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .grid { display: flex; gap: 40px; margin-top: 20px; }
+        /* Container de Conteúdo */
+        .container { padding: 40px; max-width: 1000px; margin: 30px auto; background: var(--branco); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: var(--azul-trufos); font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
+        h2 { color: var(--azul-trufos); font-size: 1.6em; margin-top: 0; }
+        
+        .grid { display: flex; gap: 50px; margin-top: 40px; }
         .col { flex: 1; }
         
-        /* Rodapé Azul com Informações Completas */
-        footer { background: var(--azul-trufos); color: var(--branco); padding: 40px 20px; text-align: center; font-size: 0.9em; margin-top: 50px; }
-        .footer-content { max-width: 1000px; margin: 0 auto; line-height: 1.8; }
-        .footer-content strong { font-size: 1.1em; }
-        .footer-link { color: #80b3ff; text-decoration: none; }
+        /* Rodapé Azul Institucional */
+        footer { background: var(--azul-trufos); color: var(--branco); padding: 40px 20px; text-align: center; font-size: 0.9em; margin-top: 60px; }
+        .footer-content { max-width: 1100px; margin: 0 auto; line-height: 2; }
+        .footer-link { color: #ffffff; text-decoration: underline; }
 
-        /* WhatsApp */
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; z-index: 1000; transition: transform 0.3s; }
+        /* WhatsApp Oficial */
+        .whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; z-index: 1000; transition: transform 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); }
     </style>
 </head>
@@ -95,16 +95,16 @@
 
 <div class="container">
     <h1>A Empresa...</h1>
-    <p>A <strong>Trufos</strong> atua com vendas e serviços de instalação e manutenção preventiva e corretiva de equipamentos eletromédicos para clínicas e hospitais.</p>
+    <p>A <strong>Trufos</strong> atua com vendas e serviços de instalação e manutenção preventiva e corretiva de equipamentos eletromédicos para clínicas e hospitais, tanto na área humana quanto na área veterinária. Atendemos todo o estado do <strong>Rio Grande do Sul</strong> e temos nossa base localizada na zona norte de Porto Alegre, nas proximidades do Shopping Iguatemi.</p>
 
     <div class="grid">
         <div class="col">
             <h2>Quem Somos</h2>
-            <p>Nossa equipe é formada por profissionais com sólida experiência no mercado médico-hospitalar.</p>
+            <p>Nossa equipe é formada por profissionais com sólida experiência no mercado de equipamentos da área médico-hospitalar, garantindo precisão técnica em cada atendimento.</p>
         </div>
         <div class="col">
             <h2>Nossa História</h2>
-            <p>Empresa consolidada com foco em qualidade e excelência no atendimento técnico.</p>
+            <p>A empresa foi consolidada com o objetivo de fornecer produtos e serviços de qualidade e excelência, sempre com muita dedicação e agilidade, buscando uma parceria duradoura que atenda a todas as expectativas de nossos clientes.</p>
         </div>
     </div>
 </div>
@@ -115,11 +115,11 @@
 
 <footer>
     <div class="footer-content">
-        <strong>TRUFOS - Assistência Técnica Hospitalar</strong><br>
-        Rua Fernando Strehlau, 22 - Jardim Itu - Porto Alegre - RS
-        Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
-        E-mail: <a href="mailto:contato@trufos.com.br" class="footer-link">contato@trufos.com.br</a><br>
-        Razão Social: 35.413.040 Sylvio Renato Nunes Alves | CNPJ: 24.348.650/0001-90
+        <strong>TRUFOS - Vendas e Assistência Técnica Hospitalar</strong><br>
+        Porto Alegre - RS | Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
+        E-mail: <a href="mailto:contato@trufos.com.br" class="footer-link">contato@trufos.com.br</a> | 
+        <a href="mailto:vendas@trufos.com.br" class="footer-link">vendas@trufos.com.br</a><br>
+        Razão Social: Terezinha de Fátima do Prado Silva | CNPJ: 24.348.650/0001-90
     </div>
 </footer>
 
