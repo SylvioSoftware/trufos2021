@@ -5,72 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trufos - Vendas e Assistência Técnica - Empresa</title>
     <style>
-        /* Cores Fiéis ao Print Original */
+        /* Paleta de Cores extraída do seu site de 2021 */
         :root {
-            --verde-fundo: #2e6e75; /* O verde petróleo que você gostou */
+            --topo-gradiente: #4da1a9; /* Verde água */
+            --fim-gradiente: #2e6e75;  /* Verde petróleo */
             --azul-trufos: #0056b3;
-            --branco-container: rgba(255, 255, 255, 0.98);
         }
 
+        /* Gradiente aplicado em toda a página */
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: var(--verde-fundo); /* Fundo sólido em todo o site */
+            background: linear-gradient(180deg, var(--topo-gradiente) 0%, var(--fim-gradiente) 100%);
+            background-attachment: fixed; /* O gradiente não "corre" quando você rola a página */
+            min-height: 100vh;
             color: #333;
         }
 
-        /* Cabeçalho sem fundo branco - integrado ao verde */
+        /* Cabeçalho transparente para mostrar o gradiente ao fundo */
         header { 
-            padding: 40px 50px 20px 50px; 
+            padding: 40px 50px; 
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
         
-        /* Ajuste do novo logo que você finalizou */
-        header img { height: 100px; width: auto; }
+        /* Seu novo logo finalizado (sem os textos secundários) */
+        header img { height: 95px; width: auto; }
 
         .header-text p { 
-            margin-top: 10px;
+            margin: 10px 0 0 0;
             font-family: "Arial Black", sans-serif; 
             font-size: 1.4em; 
-            color: #fff; /* Texto em branco para destacar no verde */
+            color: #fff; /* Branco para destacar sobre o verde */
             text-transform: uppercase;
             letter-spacing: -1px;
         }
 
-        /* Menu */
-        nav { background: var(--azul-trufos); border-top: 2px solid rgba(255,255,255,0.2); }
+        /* Barra de Navegação */
+        nav { background: var(--azul-trufos); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
-        nav a { color: #fff; text-decoration: none; padding: 15px 30px; display: block; font-weight: bold; text-transform: uppercase; font-size: 0.9em; }
+        nav a { color: #fff; text-decoration: none; padding: 15px 30px; display: block; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
         nav a:hover { background: #004494; }
 
-        /* Container de Conteúdo Branco */
+        /* Container Principal */
         .container { 
             padding: 60px; 
             max-width: 1000px; 
-            margin: 40px auto; 
-            background: var(--branco-container); 
-            border-radius: 4px; /* Bordas mais retas como no original */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
+            margin: 50px auto; 
+            background: rgba(255, 255, 255, 0.98); /* Branco quase opaco para leitura */
+            border-radius: 4px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
         }
 
-        h1 { color: var(--azul-trufos); border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 30px; }
-        h2 { color: var(--azul-trufos); font-size: 1.5em; margin-top: 0; }
+        h1 { color: var(--azul-trufos); border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 35px; }
+        h2 { color: var(--azul-trufos); font-size: 1.6em; margin-top: 0; }
         
         .grid { display: flex; gap: 50px; margin-top: 40px; }
-        .col { flex: 1; }
+        .col { flex: 1; line-height: 1.6; }
+        
+        strong { color: var(--azul-trufos); }
 
         /* Rodapé */
-        footer { background: var(--azul-trufos); color: #fff; padding: 50px 20px; text-align: center; font-size: 0.9em; margin-top: 80px; }
+        footer { background: var(--azul-trufos); color: #fff; padding: 50px 20px; text-align: center; font-size: 0.9em; margin-top: 100px; }
         .footer-content { max-width: 1000px; margin: 0 auto; line-height: 2; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/logo.png" alt="TRUFOS">
+    <img src="logo.png" alt="TRUFOS">
     <div class="header-text">
         <p>Assistência Técnica Hospitalar</p>
     </div>
@@ -92,7 +97,7 @@
     <div class="grid">
         <div class="col">
             <h2>Quem Somos</h2>
-            <p>Nossa equipe é formada por profissionais com sólida experiência de até 20 anos no mercado de equipamentos da área médico-hospitalar, garantindo precisão técnica em cada atendimento.</p>
+            <p>Nossa equipe é formada por profissionais com sólida experiência no mercado de equipamentos da área médico-hospitalar, garantindo precisão técnica e agilidade em cada atendimento.</p>
         </div>
         <div class="col">
             <h2>Nossa História</h2>
@@ -104,7 +109,7 @@
 <footer>
     <div class="footer-content">
         <strong>TRUFOS - Vendas e Assistência Técnica Hospitalar</strong><br>
-        Porto Alegre - RS | Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
+        Porto Alegre - RS | (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
         Razão Social: Terezinha de Fátima do Prado Silva | CNPJ: 24.348.650/0001-90
     </div>
 </footer>
