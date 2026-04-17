@@ -6,34 +6,111 @@
     <title>Trufos - Assistência Técnica Hospitalar</title>
     <link rel="icon" type="image/x-icon" href="img/Favicon.ico">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9; }
-        header { background: #fff; padding: 20px; border-bottom: 4px solid #0056b3; display: flex; align-items: center; justify-content: center; }
-        header img { height: 70px; margin-right: 20px; }
-        nav { background: #0056b3; padding: 12px; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9em; }
-        .container { padding: 40px; max-width: 900px; margin: 30px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #2c3e50; font-size: 1.4em; margin-top: 30px; }
-        .grid { display: flex; gap: 40px; margin-top: 20px; }
+        /* Cores e Efeito de Fundo */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+            /* Efeito Gradiente Verde do Site Original */
+            background: linear-gradient(180deg, #4da1a9 0%, #2e6e75 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho Limpo */
+        header { 
+            background: #ffffff; 
+            padding: 25px 50px; 
+            border-bottom: 5px solid #0056b3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+        
+        header img { height: 110px; width: auto; margin-bottom: 5px; }
+
+        .header-text p { 
+            margin: 0; 
+            font-family: "Arial Black", Gadget, sans-serif; 
+            font-size: 1.3em; 
+            color: #0056b3; /* Cor exata da fonte do logo */
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        /* Menu Azul Trufos */
+        nav { background: #0056b3; position: relative; z-index: 1000; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav li { position: relative; }
+        nav a { color: #fff; text-decoration: none; padding: 15px 25px; display: block; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
+        nav a:hover { background: #004494; }
+
+        /* Dropdown do Menu */
+        .dropdown { display: none; position: absolute; background: #004494; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown a { padding: 12px 15px; text-transform: none; font-size: 0.9em; border-bottom: 1px solid #0056b3; }
+        nav li:hover .dropdown { display: block; }
+
+        /* Caixa Branca de Conteúdo (para destacar do fundo verde) */
+        .container { 
+            padding: 50px; 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: rgba(255, 255, 255, 0.98); 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+        }
+
+        h1 { color: #0056b3; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
+        h2 { color: #0056b3; font-size: 1.6em; margin-top: 0; }
+        
+        .grid { display: flex; gap: 50px; margin-top: 40px; }
         .col { flex: 1; }
-        footer { background: #2c3e50; color: #fff; padding: 30px; text-align: center; font-size: 0.85em; margin-top: 50px; }
-        .contact-info { color: #bdc3c7; margin-top: 10px; }
+
+        /* Rodapé Institucional */
+        footer { background: #0056b3; color: #fff; padding: 40px 20px; text-align: center; font-size: 0.85em; margin-top: 60px; }
+        .footer-content { max-width: 1100px; margin: 0 auto; line-height: 2; }
+        .footer-link { color: #ffffff; text-decoration: underline; }
+
+        /* WhatsApp */
+        .whatsapp-float { position: fixed; width: 65px; height: 65px; bottom: 40px; right: 40px; z-index: 1000; transition: transform 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img/logo.png" alt="Trufos - Assistência Técnica Hospitalar">
-    <div>
-        <h1 style="margin:0; font-size: 1.8em; color: #0056b3;">Trufos</h1>
-        <p style="margin:0; font-size: 1em; color: #666;">Assistência Técnica Hospitalar</p>
+    <a href="index.html">
+        <img src="img/logo.png" alt="TRUFOS">
+    </a>
+    <div class="header-text">
+        <p>Assistência Técnica Hospitalar</p>
     </div>
 </header>
 
 <nav>
-    <a href="index.html">A Empresa</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html">Contato</a>
+    <ul>
+        <li><a href="index.html">A Empresa</a></li>
+        <li>
+            <a href="produtos.html">Produtos ▾</a>
+            <div class="dropdown">
+                <a href="produtos.html#autoclaves">Autoclaves</a>
+                <a href="produtos.html#lavadoras">Lavadoras Ultrassônicas</a>
+                <a href="produtos.html#seladoras">Seladoras Térmicas</a>
+            </div>
+        </li>
+        <li>
+            <a href="servicos.html">Serviços ▾</a>
+            <div class="dropdown">
+                <a href="servicos.html#preventiva">Manutenção Preventiva</a>
+                <a href="servicos.html#corretiva">Manutenção Corretiva</a>
+                <a href="servicos.html#qualificacao">Qualificação e Calibração</a>
+            </div>
+        </li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
 </nav>
 
 <div class="container">
@@ -52,11 +129,17 @@
     </div>
 </div>
 
+<a href="https://wa.me/5551992701789" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Trufos" style="width:100%">
+</a>
+
 <footer>
-    <p><strong>Trufos - Assistência Técnica Hospitalar</strong></p>
-    <div class="contact-info">
-        Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
-        Porto Alegre - RS | CNPJ: 24.348.650/0001-90
+    <div class="footer-content">
+        <strong>TRUFOS - Vendas e Assistência Técnica Hospitalar</strong><br>
+        Porto Alegre - RS | Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
+        E-mail: <a href="mailto:contato@trufos.com.br" class="footer-link">contato@trufos.com.br</a> | 
+        <a href="mailto:vendas@trufos.com.br" class="footer-link">vendas@trufos.com.br</a><br>
+        Razão Social: Terezinha de Fátima do Prado Silva | CNPJ: 24.348.650/0001-90
     </div>
 </footer>
 
