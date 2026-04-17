@@ -3,70 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trufos - Assistência Técnica Hospitalar</title>
-    <link rel="icon" type="image/x-icon" href="img/Favicon.ico">
+    <title>Trufos - Vendas e Assistência Técnica - Empresa</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9; }
-        
-        /* Cabeçalho focado na Logo */
-        header { background: #fff; padding: 25px; border-bottom: 4px solid #0056b3; text-align: center; }
-        header img { max-height: 100px; width: auto; }
-        
-        /* Menu de Navegação */
-        nav { background: #0056b3; padding: 12px; text-align: center; sticky; top: 0; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; letter-spacing: 1px; }
-        nav a:hover { text-decoration: underline; }
+        /* Gradiente Extraído do Conceito de 2021 */
+        :root {
+            --azul-logo: #0056b3;
+            --topo-gradiente: #4da1a9; /* Verde água superior */
+            --fim-gradiente: #2e6e75;  /* Verde petróleo inferior */
+        }
 
-        .container { padding: 40px; max-width: 900px; margin: 30px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        
-        /* SEO: Título invisível para usuários, visível para o Google */
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            /* O gradiente agora ocupa a tela toda, incluindo o fundo do cabeçalho */
+            background: linear-gradient(180deg, var(--topo-gradiente) 0%, var(--fim-gradiente) 100%);
+            background-attachment: fixed;
+            color: #333;
+        }
 
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .grid { display: flex; gap: 40px; margin-top: 20px; }
+        /* Cabeçalho com fundo semi-transparente para o gradiente aparecer */
+        header { 
+            background: rgba(255, 255, 255, 0.9); /* Branco suave para destacar o logo */
+            padding: 30px 50px; 
+            border-bottom: 5px solid var(--azul-logo);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        header img { height: 110px; width: auto; margin-bottom: 5px; }
+
+        .header-text p { 
+            margin: 0; 
+            font-family: "Arial Black", Gadget, sans-serif; 
+            font-size: 1.3em; 
+            color: var(--azul-logo); 
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        /* Menu */
+        nav { background: var(--azul-logo); }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav a { color: #fff; text-decoration: none; padding: 15px 25px; display: block; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
+        nav a:hover { background: #004494; }
+
+        /* Container de Conteúdo */
+        .container { 
+            padding: 50px; 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: rgba(255, 255, 255, 0.95); 
+            border-radius: 8px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+        }
+
+        h1, h2 { color: var(--azul-logo); }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        
+        .grid { display: flex; gap: 40px; margin-top: 30px; }
         .col { flex: 1; }
-        
-        footer { background: #2c3e50; color: #fff; padding: 30px; text-align: center; font-size: 0.85em; margin-top: 50px; }
-        .contact-info { color: #bdc3c7; margin-top: 10px; }
+
+        /* Rodapé */
+        footer { background: var(--azul-logo); color: #fff; padding: 40px 20px; text-align: center; font-size: 0.85em; }
+        .footer-content { max-width: 1000px; margin: 0 auto; line-height: 1.8; }
+        .footer-link { color: #fff; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="sr-only">Trufos - Assistência Técnica Hospitalar</h1>
-    <a href="index.html">
-        <img src="img/logo.png" alt="Trufos - Assistência Técnica Hospitalar - Manutenção de Autoclaves e Equipamentos de CME">
-    </a>
+    <img src="img/logo.png" alt="TRUFOS">
+    <div class="header-text">
+        <p>Assistência Técnica Hospitalar</p>
+    </div>
 </header>
 
 <nav>
-    <a href="index.html">A Empresa</a>
-    <a href="vendas.html">Vendas / Produtos</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html">Contato</a>
+    <ul>
+        <li><a href="index.html">A Empresa</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
 </nav>
 
 <div class="container">
-    <h1>A Empresa</h1>
-    <p>A <strong>Trufos</strong> atua com foco em soluções para o ambiente hospitalar, laboratorial e veterinário. Nossa especialidade é garantir que seu Centro de Materiais e Esterilização (CME) opere com 100% de eficiência e segurança.</p>
+    <h1>A Empresa...</h1>
+    <p>A <strong>Trufos</strong> atua com vendas e serviços de instalação e manutenção preventiva e corretiva de equipamentos eletromédicos para clínicas e hospitais, tanto na área humana quanto na área veterinária. Atendemos todo o estado do <strong>Rio Grande do Sul</strong> e temos nossa base localizada na zona norte de Porto Alegre, nas proximidades do Shopping Iguatemi.</p>
 
     <div class="grid">
         <div class="col">
-            <h3>Localização e Atendimento</h3>
-            <p>Sediada na zona norte de <strong>Porto Alegre</strong> (próximo ao Shopping Iguatemi), atendemos com agilidade toda a capital e o interior do Rio Grande do Sul.</p>
+            <h2>Quem Somos</h2>
+            <p>Nossa equipe é formada por profissionais com sólida experiência no mercado de equipamentos da área médico-hospitalar, garantindo precisão técnica em cada atendimento.</p>
         </div>
         <div class="col">
-            <h3>Expertise Técnica</h3>
-            <p>Com quase 30 anos de experiência técnica e registro atualizado (CNPJ 24.348.650/0001-90), oferecemos o suporte que clínicas e hospitais precisam para cumprir as normas da RDC 15.</p>
+            <h2>Nossa História</h2>
+            <p>A empresa foi fundada em <strong>março de 2016</strong> por <strong>Sylvio Alves</strong>, profissional que atua no ramo desde <strong>janeiro de 1997</strong>. Nosso objetivo é fornecer produtos e serviços de qualidade e excelência, com muita dedicação, atenção e agilidade, buscando parcerias duradouras e soluções que atendam a todas as expectativas de nossos clientes.</p>
         </div>
     </div>
 </div>
 
 <footer>
-    <p><strong>Trufos - Assistência Técnica Hospitalar</strong></p>
-    <div class="contact-info">
-        Telefone: (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
-        Rua Fernando Strehlau, 22 - Jardim Itu, Porto Alegre - RS
+    <div class="footer-content">
+        <strong>TRUFOS - Vendas e Assistência Técnica Hospitalar</strong><br>
+        Porto Alegre - RS | (51) 3061-1094 | WhatsApp: (51) 99270-1789<br>
+        Razão Social: Terezinha de Fátima do Prado Silva | CNPJ: 24.348.650/0001-90
     </div>
 </footer>
 
