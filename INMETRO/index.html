@@ -6,7 +6,7 @@
   const repo = "SylvioSoftware/trufos2021"; // Ajuste aqui
   const path = "INMETRO";
 
-  fetch(`https://api.github.com/repos/${repo}/contents/${path}`)
+  fetch(`https://api.github.com/repos/${repo}/${path}`)
     .then((response) => response.json())
     .then((data) => {
       const lista = document.getElementById("lista-arquivos");
