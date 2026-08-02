@@ -3,18 +3,25 @@
 </ul>
 
 <script>
-  const repo = "SylvioSoftware/trufos2021"; // Ajuste aqui
+  const repo = "SylvioSoftware/trufos2021"; 
   const path = "INMETRO";
 
-  fetch(`https://api.github.com/repos/${repo}/${path}`)
+  // Adicionado /contents/ na URL
+  fetch(`https://api.github.com/repos/${repo}/contents/${path}`)
     .then((response) => response.json())
     .then((data) => {
       const lista = document.getElementById("lista-arquivos");
       lista.innerHTML = "";
+      
       data.forEach((file) => {
-        if (file.name.endsWith(".html") && file.name !== "index.html") {
-          lista.innerHTML += `<li><a href="${file.name}">${file.name}</a></li>`;
+        // Altere para .endsWith(".pdf") se quiser listar os PDFs da pasta
+        if (file.name.endsWith(".pdf")) {
+          lista.innerHTML += `<li><a href="${file.download_url}" target="_blank">${file.name}</a></li>`;
         }
       });
+    })
+    .catch((error) => {
+      console.error("Erro ao buscar arquivos:", error);
+      document.getElementById("lista-arquivos").innerHTML = "Erro ao carregar arquivos.";
     });
 </script>
